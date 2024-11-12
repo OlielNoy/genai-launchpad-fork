@@ -24,13 +24,13 @@ class PipelineRegistry:
         pipelines: Dictionary mapping pipeline type strings to pipeline classes
     Example:
         pipelines: Dict[str, Type[Pipeline]] = {
-        "support": CustomerSupportPipeline,
-        "helpdesk": InternalHelpdeskPipeline,
-    }
+            "support": CustomerSupportPipeline,
+            "helpdesk": InternalHelpdeskPipeline,
+        }
     """
 
     pipelines: Dict[str, Type[Pipeline]] = {
-        # "support": CustomerSupportPipeline, # Example
+        # "support": CustomerSupportPipeline, # Register your pipeline here
     }
 
     @staticmethod
