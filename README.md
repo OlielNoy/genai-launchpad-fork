@@ -1,4 +1,4 @@
-# GenAI Launchpad
+# GenAI Launchpad Boilerplate
 
 With AI innovation moving beyond the speed of light, your time to develop is now more precious than ever. That’s why we’ve built the GenAI Launchpad – your secret weapon to shipping production-ready AI apps, faster.
 
@@ -10,7 +10,7 @@ No need to start from scratch or waste time on repetitive configurations. The Ge
 
 ## Table of Contents
 
-- [GenAI Launchpad](#genai-launchpad)
+- [GenAI Launchpad Boilerplate](#genai-launchpad-boilerplate)
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
@@ -23,11 +23,9 @@ No need to start from scratch or waste time on repetitive configurations. The Ge
       - [2. Set up environment files](#2-set-up-environment-files)
       - [3. Build and start the Docker containers](#3-build-and-start-the-docker-containers)
       - [4. Make database migrations](#4-make-database-migrations)
-      - [5. Start logging:](#5-start-logging)
-      - [6. Create virtual environment and install requirements](#6-create-virtual-environment-and-install-requirements)
-      - [7. Check database](#7-check-database)
-      - [8. Build Your Project](#8-build-your-project)
-  - [Configuration](#configuration)
+      - [5. Create virtual environment and install requirements](#5-create-virtual-environment-and-install-requirements)
+      - [6. Check database](#6-check-database)
+      - [7. Build Your Project](#7-build-your-project)
 
 ## Overview
 
@@ -123,16 +121,7 @@ cd ../app
 ./migrate.sh        # Apply migrations
 ```
 
-When prompted for a migration message, you can enter a brief description like "Initial migration" or "Launch".
-
-#### 5. Start logging:
-
-```bash
-cd ../docker
-./logs.sh
-```
-
-#### 6. Create virtual environment and install requirements
+#### 5. Create virtual environment and install requirements
 
   a. Create a new virtual environment:
     ```bash
@@ -156,7 +145,7 @@ cd ../docker
     ```
 
 
-#### 7. Check database
+#### 6. Check database
 
 Connect to the database using your favorite database explorer. The default settings are:
 
@@ -168,7 +157,7 @@ Connect to the database using your favorite database explorer. The default setti
 
 In the `events` table, you should see the event you just processed. It contains the raw data (JSON) in the `data` column and the processed event (JSON) with in the `task_context` column.
 
-#### 8. Build Your Project 
+#### 7. Build Your Project 
 
 Here's a high-level action plan to update the template for your unique project:
 
@@ -179,13 +168,3 @@ Here's a high-level action plan to update the template for your unique project:
 5. Define your AI pipelines and processing steps in `app/pipelines/`
 6. Register your pipeline(s) in `app/pipelines/registry.py`
 7. Test your pipeline with sample events in the playground
-
-## Configuration
-
-Configuration is managed through environment variables and settings files. Key configuration files:
-
-- `app/.env`: Application-specific settings
-- `docker/.env`: Docker and service configurations
-- `app/config/settings.py`: Application-specific and LLM models
-
-Refer to the `.env.example` files for available options.
