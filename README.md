@@ -87,7 +87,7 @@ The Launchpad follows a logical, scalable, and reasonably standardized project s
 #### 1. Clone the repository
 
 ```bash
-git clone https://github.com/datalumina/genai-launchpad.git
+git clone -b boilerplate https://github.com/datalumina/genai-launchpad.git
 cd genai-launchpad
 ```
 
