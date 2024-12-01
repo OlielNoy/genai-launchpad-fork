@@ -1,23 +1,64 @@
-# Documentation Coming Soon
+# GenAI Launchpad Documentation
 
-We are actively working on comprehensive documentation for this project. In the meantime, you can:
+Welcome to the GenAI Launchpad documentation. This guide will help you build and deploy production-ready AI applications using our event-driven architecture.
 
-1. Reference the accelerator course video materials
-2. Review the inline documentation provided in each code file
+## Documentation Sections
 
-We've made every effort to document the code thoroughly with clear comments and docstrings. However, we understand that you might need additional clarification or find areas that need better documentation.
+### Getting Started
+- [Installation Guide](getting_started/installation.md) - Set up your development environment
+- [Quickstart Guide](getting_started/quickstart.md) - Build your first AI pipeline
+- [Configuration Guide](getting_started/configuration.md) - Configure your environment
+- [Deployment Guide](getting_started/deployment.md) - Deploy to production
 
-## Need Help?
+### Core Concepts
+- [Architecture Overview](core_concepts/architecture.md) - System architecture and design
+- [Event-Driven Design](core_concepts/event_driven_design.md) - Understanding events and flows
+- [Pipeline Architecture](core_concepts/pipelines.md) - Building AI pipelines
+- [Task Processing](core_concepts/task_processing.md) - Background task handling
 
-If you:
+### Components
+- Database
+  - [Models](components/database/models.md)
+  - [Migrations](components/database/migrations.md)
+  - [Repository Pattern](components/database/repository_pattern.md)
+- API
+  - [Endpoints](components/api/endpoints.md)
+  - [Dependencies](components/api/dependencies.md)
+  - [Schemas](components/api/schemas.md)
+- Services
+  - [LLM Integration](components/services/llm_integration.md)
+  - [Task Queue](components/services/task_queue.md)
 
+### Guides
+- [Custom Pipelines](guides/custom_pipelines.md)
+- [Event Handling](guides/event_handling.md)
+- [Scaling](guides/scaling.md)
+- [Monitoring](guides/monitoring.md)
+
+### Reference
+- [Configuration Options](reference/configuration_options.md)
+- [API Reference](reference/api_reference.md)
+- [Environment Variables](reference/environment_variables.md)
+
+### Examples
+- [Basic Pipeline](examples/basic_pipeline.md)
+- [Custom Events](examples/custom_events.md)
+- [Advanced Patterns](examples/advanced_patterns.md)
+
+## Contributing
+
+We welcome contributions to our documentation. If you:
 - Find anything unclear
 - Notice missing documentation
 - Have suggestions for improvement
 
-Please don't hesitate to:
-
-- Join our Discord community for discussions
+Please:
 - Open an issue on GitHub
+- Submit a pull request
+- Join our community discussions
 
-Your feedback helps us improve the documentation for everyone!
+## Need Help?
+
+- Join our Discord community
+- Check our FAQ section
+- Contact support
