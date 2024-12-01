@@ -2,7 +2,7 @@
 
 With AI innovation moving beyond the speed of light, your time to develop is now more precious than ever. That’s why we’ve built the GenAI Launchpad – your secret weapon to shipping production-ready AI apps, faster.
 
-## Introduction
+## 🚀 Introduction
 
 Welcome to the GenAI Launchpad – your all-in-one repository for building powerful, scalable Generative AI applications. Whether you’re prototyping or deploying at scale, this Docker-based setup has you covered with everything from event-driven architecture to seamless AI pipeline integration.
 
@@ -14,22 +14,7 @@ No need to start from scratch or waste time on repetitive configurations. The Ge
 >
 > We recommend following the Accelerator Course first to understand the example implementation in the `main` branch before exploring the boilerplate branch for your own projects.
 
-## Table of Contents
-
-- [GenAI Launchpad](#genai-launchpad)
-  - [Introduction](#introduction)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [Key Features](#key-features)
-  - [Documentation](#documentation)
-  - [Project Structure](#project-structure)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-  - [Support](#support)
-  - [License](#license)
-    - [Key Points](#key-points)
-
-## Overview
+## 🎯 Overview
 
 The GenAI Launchpad isn’t just another framework – it’s your shortcut to a production-ready AI infrastructure. Built for speed and control, its modular architecture brings together the best tools and design patterns to help you deploy faster without compromising flexibility.
 
@@ -43,7 +28,7 @@ Here’s what you’re working with:
 
 All services are containerized using Docker, ensuring consistency across development and deployment environments.
 
-## Key Features
+## ⭐ Key Features
 
 - **Event-Driven Architecture**: Built-in support for designing and implementing event-driven systems.
 - **AI Pipeline Support**: Pre-configured setup for integrating AI models and pipelines.
@@ -53,11 +38,11 @@ All services are containerized using Docker, ensuring consistency across develop
 - **Rapid Development**: Boilerplate code and project structure to accelerate development.
 - **Docker-Based Deployment**: Complete Docker-based strategy for straightforward deployment.
 
-## Documentation
+## 📚 Documentation
 
 While the code is already properly documented, we also included a dedicated `docs` folder in the repository. The documentation covers everything from initial setup through advanced topics like vector storage, LLM integration, and deployment strategies, organized into five main sections (Getting Started, Architecture, Core Components, Guides, and Concepts). For a complete overview and navigation through all topics, see the [documentation index](docs/README.md).
 
-## Project Structure
+## 🏗️ Project Structure
 
 The Launchpad follows a logical, scalable, and reasonably standardized project structure for building event-driven GenAI apps.
 
@@ -79,7 +64,7 @@ The Launchpad follows a logical, scalable, and reasonably standardized project s
 └── requests               # Event definitions and handlers
 ```
 
-## Getting Started
+## 🚦 Getting Started
 
 We provide two comprehensive guides for setting up the GenAI Launchpad:
 
@@ -93,7 +78,33 @@ We provide two comprehensive guides for setting up the GenAI Launchpad:
 - Docker (Updated to support docker compose)
 - VS Code or Cursor (optional, but recommended)
 
-## Support
+## 🛠️ Development Workflow
+
+The GenAI Launchpad follows a structured development approach that emphasizes clean architecture and iterative development. Starting with the boilerplate branch, developers can quickly set up their environment, define events, create schemas, and build AI pipelines. The platform includes a playground for experimentation and comprehensive testing utilities to ensure robust implementation.
+
+For detailed instructions, see our [Development Workflow Guide](docs/04-guides/06-development-workflow.md).
+
+## 🎥 Video Tutorials
+
+We offer two video Tutorials to help you master the GenAI Launchpad:
+
+### Accelerator Course
+A step-by-step guide through the complete example implementation, perfect for getting started.
+
+- Link: [Accelerator Course Video](https://datalumina.wistia.com/medias/inidp48v10)
+- Password: xXH3VzfdiFBToQDuUdeT
+- Duration: 70 minutes
+
+### Boilerplate Deep Dive
+An in-depth exploration of building projects from scratch using the boilerplate.
+
+- Link: [GenAI Launchpad - Boilerplate](https://datalumina.wistia.com/medias/pd280tdw7s)
+- Password: ybAziu4QbyfU44QTrMqU
+- Duration: 40 minutes
+
+Both tutorials include instructions and real-world examples to ensure you can effectively leverage the repository for your projects.
+
+## 💬 Support
 
 For support, questions, and collaboration related to the GenAI Launchpad:
 
@@ -103,7 +114,7 @@ For support, questions, and collaboration related to the GenAI Launchpad:
 
 3. **Email**: For private inquiries or matters that don't fit Discord or GitHub, you can reach us at launchpad@datalumina.com. However, we encourage using Discord or GitHub for most support needs to benefit the entire community.
 
-## License
+## ⚖️ License
 
 This project is licensed under the DATALUMINA License. See the [LICENSE](/LICENSE) file for details.
 
