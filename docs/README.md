@@ -4,19 +4,21 @@ Welcome to the GenAI Launchpad documentation! This guide will help you understan
 
 Whether you're building a chatbot, content generation system, or complex AI-powered application, this documentation will guide you through every step of the process.
 
-## 1. Getting Started
+## Chapters
+
+### 1. Getting Started
 
 - [Introduction](01-getting-started/01-introduction.md)
 - [Installation Guide](01-getting-started/02-installation.md)
 
-## 2. Architecture
+### 2. Architecture
 
 - [Overview](02-architecture/01-overview.md)
 - [Core Pipeline System](02-architecture/02-core-system.md)
 - [Pipeline Design](02-architecture/03-pipeline-design.md)
 - [Worker System](02-architecture/04-worker-system.md)
 
-## 3. Core Components
+### 3. Core Components
 
 - [API Reference](03-core-components/01-api-reference.md)
 - [Database and Migrations](03-core-components/02-database.md)
@@ -24,14 +26,14 @@ Whether you're building a chatbot, content generation system, or complex AI-powe
 - [LLM Factory](03-core-components/04-llm-factory.md)
 - [Prompt Management](03-core-components/05-prompt-management.md)
 
-## 4. Guides
+### 4. Guides
 
 - [Configuration Management](04-guides/01-configuration.md)
 - [Docker Infrastructure](04-guides/02-docker-compose.md)
 - [Event Testing](04-guides/03-testing-events.md)
 - [Deployment Guide](04-guides/04-deployment.md)
 
-## 5. Concepts
+### 5. Concepts
 
 - [Design Philosophy](05-concepts/01-philosopy.md)
 
