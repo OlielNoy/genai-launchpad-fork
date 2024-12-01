@@ -1,58 +1,46 @@
 # GenAI Launchpad Documentation
 
-Welcome to the GenAI Launchpad documentation. This guide will help you build and deploy production-ready AI applications using our event-driven architecture.
+## 1. Getting Started
 
-## Documentation Sections
+- [Introduction](01-getting-started/01-introduction.md)
+- [Installation Guide](01-getting-started/02-installation.md)
 
-### Getting Started
-- [Installation Guide](getting_started/installation.md) - Set up your development environment
-- [Quickstart Guide](getting_started/quickstart.md) - Build your first AI pipeline
-- [Configuration Guide](getting_started/configuration.md) - Configure your environment
-- [Deployment Guide](getting_started/deployment.md) - Deploy to production
+## 2. Architecture
 
-### Core Concepts
-- [Architecture Overview](core_concepts/architecture.md) - System architecture and design
-- [Event-Driven Design](core_concepts/event_driven_design.md) - Understanding events and flows
-- [Pipeline Architecture](core_concepts/pipelines.md) - Building AI pipelines
-- [Task Processing](core_concepts/task_processing.md) - Background task handling
+- [Overview](02-architecture/01-overview.md)
+- [Core Pipeline System](02-architecture/02-core-system.md)
+- [Pipeline Design](02-architecture/03-pipeline-design.md)
 
-### Components
-- Database
-  - [Models](components/database/models.md)
-  - [Migrations](components/database/migrations.md)
-  - [Repository Pattern](components/database/repository_pattern.md)
-- API
-  - [Endpoints](components/api/endpoints.md)
-  - [Dependencies](components/api/dependencies.md)
-  - [Schemas](components/api/schemas.md)
-- Services
-  - [LLM Integration](components/services/llm_integration.md)
-  - [Task Queue](components/services/task_queue.md)
+## 3. Core Components
 
-### Guides
-- [Custom Pipelines](guides/custom_pipelines.md)
-- [Event Handling](guides/event_handling.md)
-- [Scaling](guides/scaling.md)
-- [Monitoring](guides/monitoring.md)
+- [API Reference](03-core-components/01-api-reference.md)
+- [Database and Migrations](03-core-components/02-database.md)
+- [Vector Store](03-core-components/03-vector-store.md)
+- [LLM Factory](03-core-components/04-llm-factory.md)
+- [Prompt Management](03-core-components/05-prompt-management.md)
 
-### Reference
-- [Configuration Options](reference/configuration_options.md)
-- [API Reference](reference/api_reference.md)
-- [Environment Variables](reference/environment_variables.md)
+## 4. Guides
 
-### Examples
-- [Basic Pipeline](examples/basic_pipeline.md)
-- [Custom Events](examples/custom_events.md)
-- [Advanced Patterns](examples/advanced_patterns.md)
+- [Configuration Management](04-guides/01-configuration.md)
+- [Docker Infrastructure](04-guides/02-docker-compose.md)
+- [Event Testing](04-guides/03-testing-events.md)
+- [Deployment Guide](04-guides/04-deployment.md)
+
+## 5. Concepts
+
+- [Design Philosophy](05-concepts/01-philosopy.md)
+
 
 ## Contributing
 
 We welcome contributions to our documentation. If you:
+
 - Find anything unclear
 - Notice missing documentation
 - Have suggestions for improvement
 
 Please:
+
 - Open an issue on GitHub
 - Submit a pull request
 - Join our community discussions
@@ -60,5 +48,4 @@ Please:
 ## Need Help?
 
 - Join our Discord community
-- Check our FAQ section
 - Contact support
