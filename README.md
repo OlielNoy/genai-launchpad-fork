@@ -15,6 +15,7 @@ No need to start from scratch or waste time on repetitive configurations. The Ge
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Key Features](#key-features)
+  - [Documentation](#documentation)
   - [Project Structure](#project-structure)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -50,6 +51,10 @@ All services are containerized using Docker, ensuring consistency across develop
 - **Production-Ready**: Includes essential components for a production environment, including logging, monitoring, and security features.
 - **Rapid Development**: Boilerplate code and project structure to accelerate development.
 - **Docker-Based Deployment**: Complete Docker-based strategy for straightforward deployment.
+
+## Documentation
+
+While the code is already properly documented, we also included a dedicated `docs` folder in the repository. The documentation covers everything from initial setup through advanced topics like vector storage, LLM integration, and deployment strategies, organized into five main sections (Getting Started, Architecture, Core Components, Guides, and Concepts). For a complete overview and navigation through all topics, see the [documentation index](docs/README.md).
 
 ## Project Structure
 
