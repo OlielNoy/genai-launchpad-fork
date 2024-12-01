@@ -30,7 +30,6 @@
 
 - [Design Philosophy](05-concepts/01-philosopy.md)
 
-
 ## Contributing
 
 We welcome contributions to our documentation. If you:
@@ -49,3 +48,4 @@ Please:
 
 - Join our Discord community
 - Contact support
+
