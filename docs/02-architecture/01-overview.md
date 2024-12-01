@@ -14,6 +14,18 @@ What makes this architecture particularly powerful is its foundation in battle-t
 
 When a client application interacts with GenAI Launchpad, it initiates a carefully orchestrated flow through several architectural layers. Let's follow this journey to understand how each component contributes to the system's robustness.
 
+```mermaid
+sequenceDiagram
+    Client->>API: POST /events
+    API->>Database: Store Event
+    API->>Redis: Queue Task
+    API->>Client: 202 Accepted
+    Celery Worker->>Redis: Poll for Tasks
+    Celery Worker->>Database: Get Event
+    Celery Worker->>Pipeline: Process Event
+    Celery Worker->>Database: Store Results
+```
+
 ### The Request Journey
 
 Every interaction begins at the API layer, where FastAPI handles incoming HTTP requests. Rather than processing these requests synchronously, the system transforms them into events – a design choice that enables resilience and scalability. Each request is validated against predefined event schemas, ensuring data consistency before it enters the system's core.
