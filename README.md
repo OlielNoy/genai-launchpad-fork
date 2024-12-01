@@ -1,4 +1,4 @@
-# GenAI Launchpad Boilerplate
+# GenAI Launchpad
 
 With AI innovation moving beyond the speed of light, your time to develop is now more precious than ever. That’s why we’ve built the GenAI Launchpad – your secret weapon to shipping production-ready AI apps, faster.
 
@@ -6,11 +6,17 @@ With AI innovation moving beyond the speed of light, your time to develop is now
 
 Welcome to the GenAI Launchpad – your all-in-one repository for building powerful, scalable Generative AI applications. Whether you’re prototyping or deploying at scale, this Docker-based setup has you covered with everything from event-driven architecture to seamless AI pipeline integration.
 
-No need to start from scratch or waste time on repetitive configurations. The GenAI Launchpad is engineered to get you up and running fast, with a flexible design that fits your workflow – all while keeping things production-ready from day one
+No need to start from scratch or waste time on repetitive configurations. The GenAI Launchpad is engineered to get you up and running fast, with a flexible design that fits your workflow – all while keeping things production-ready from day one.
+
+> **Note**: This repository has two main branches:
+> - [`main`](https://github.com/datalumina/genai-launchpad/tree/main): Contains a complete example implementation to demonstrate the Launchpad's capabilities
+> - [`boilerplate`](https://github.com/datalumina/genai-launchpad/tree/boilerplate): A stripped-down version with just the core components, perfect for starting new projects.
+>
+> We recommend following the Accelerator Course first to understand the example implementation in the `main` branch before exploring the boilerplate branch for your own projects.
 
 ## Table of Contents
 
-- [GenAI Launchpad Boilerplate](#genai-launchpad-boilerplate)
+- [GenAI Launchpad](#genai-launchpad)
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
@@ -19,14 +25,9 @@ No need to start from scratch or waste time on repetitive configurations. The Ge
   - [Project Structure](#project-structure)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Quick Start](#quick-start)
-      - [1. Clone the repository](#1-clone-the-repository)
-      - [2. Set up environment files](#2-set-up-environment-files)
-      - [3. Build and start the Docker containers](#3-build-and-start-the-docker-containers)
-      - [4. Make database migrations](#4-make-database-migrations)
-      - [5. Create virtual environment and install requirements](#5-create-virtual-environment-and-install-requirements)
-      - [6. Check database](#6-check-database)
-      - [7. Build Your Project](#7-build-your-project)
+  - [Support](#support)
+  - [License](#license)
+    - [Key Points](#key-points)
 
 ## Overview
 
@@ -80,89 +81,41 @@ The Launchpad follows a logical, scalable, and reasonably standardized project s
 
 ## Getting Started
 
+We provide two comprehensive guides for setting up the GenAI Launchpad:
+
+- [Quick Start Guide](docs/01-getting-started/03-quick-start.md) - For those following the Accelerator video training or wanting to quickly test the platform
+- [Detailed Installation Guide](docs/01-getting-started/02-installation.md) - For production setups, including security considerations and troubleshooting
+
 ### Prerequisites
 
 - Git
-- Python 3
+- Python 3.9 or higher
 - Docker (Updated to support docker compose)
 - VS Code or Cursor (optional, but recommended)
 
-### Quick Start
+## Support
 
-#### 1. Clone the repository
+For support, questions, and collaboration related to the GenAI Launchpad:
 
-```bash
-git clone -b boilerplate https://github.com/datalumina/genai-launchpad.git
-cd genai-launchpad
-```
+1. **Discord Community**: Join our [Discord server](https://discord.gg/H67KUD6vXe) for quick questions, real-time support, and feature discussions. This is the fastest way to get help and connect with other users.
 
-#### 2. Set up environment files
+2. **GitHub Issues**: For bug reports and technical problems, please open an issue on our [GitHub repository](https://github.com/datalumina/genai-launchpad/issues). This helps us track issues systematically and builds a searchable knowledge base for the community.
 
-```bash
-cp app/.env.example app/.env
-cp docker/.env.example docker/.env
-```
+3. **Email**: For private inquiries or matters that don't fit Discord or GitHub, you can reach us at launchpad@datalumina.com. However, we encourage using Discord or GitHub for most support needs to benefit the entire community.
 
-You can leave the `docker/.env` file as is for the quick start. However, you need to add your OpenAI API key to the `app/.env` file. Open `app/.env` and locate the `OPENAI_API_KEY` variable. Replace its value with your actual OpenAI API key:
+## License
 
-```yaml
-OPENAI_API_KEY=your_openai_api_key_here
-```
+This project is licensed under the DATALUMINA License. See the [LICENSE](/LICENSE) file for details.
 
-#### 3. Build and start the Docker containers
+### Key Points
 
-```bash
-cd ./docker
-./start.sh
-```
+- You are free to use this code for personal or commercial projects, including client work.
+- You can modify and build upon the code.
+- You cannot resell or distribute this code as a template or part of a package where the primary value is in the code itself.
+- The software is provided "AS IS", without warranty of any kind.
 
-To run .sh scripts on Windows, install [Git Bash](https://git-scm.com/downloads/win), then right-click in the script’s folder and select “Git Bash Here.” Use ./scriptname.sh in the Git Bash terminal to execute the script.
+For the full license text, please refer to the [LICENSE](/LICENSE) file in the repository.
 
-#### 4. Make database migrations
+---
 
-```bash
-cd ../app
-./makemigration.sh  # Create a new migration
-./migrate.sh        # Apply migrations
-```
-
-#### 5. Create virtual environment and install requirements
-
-```bash
-# Create a new virtual environment
-python -m venv venv
-
-# Activate the virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS and Linux:
-source venv/bin/activate
-
-# Install the required packages
-cd app
-pip install -r requirements.txt
-```
-
-#### 6. Check database
-
-Connect to the database using your favorite database explorer. The default settings are:
-
-- Host: localhost
-- Port: 5432
-- Database: launchpad
-- Username: postgres
-- Password: super-secret-postgres-password
-
-In the `events` table, you should see the event you just processed. It contains the raw data (JSON) in the `data` column and the processed event (JSON) with in the `task_context` column.
-
-#### 7. Build Your Project 
-
-Here's a high-level action plan to update the template for your unique project:
-
-1. Update the '.env' files with your API keys and passwords
-2. Update your settings in `app/config`
-3. Define the event(s) in `requests/events` (your incoming data)
-4. Update the API schema in `app/api/event_schema.py` (matching your events)
-5. Define your AI pipelines and processing steps in `app/pipelines/`
-6. Register your pipeline(s) in `app/pipelines/registry.py`
-7. Test your pipeline with sample events in the playground
+For further assistance or to contribute to the GenAI Launchpad, please consult the project maintainers or refer to the contribution guidelines.
