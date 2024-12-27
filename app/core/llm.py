@@ -36,7 +36,7 @@ class LLMNode(Node, ABC):
     class ResponseModel(BaseModel):
         """Base model for LLM response data.
 
-        Override this class to define the specific Pydanticresponse structure
+        Override this class to define the specific Pydantic response structure
         produced by your LLM implementation.
         """
 

@@ -8,7 +8,6 @@ from psycopg2.extras import RealDictCursor
 from config.settings import get_settings
 from openai import OpenAI
 from timescale_vector import client
-from utils.timer import timer
 
 """
 Vector Store Management Module
@@ -71,15 +70,14 @@ class VectorStore:
             A list of floats representing the embedding.
         """
         text = text.replace("\n", " ")
-        with timer("Embedding generation"):
-            embedding = (
-                self.openai_client.embeddings.create(
-                    input=[text],
-                    model=self.embedding_model,
-                )
-                .data[0]
-                .embedding
+        embedding = (
+            self.openai_client.embeddings.create(
+                input=[text],
+                model=self.embedding_model,
             )
+            .data[0]
+            .embedding
+        )
         return embedding
 
     def create_tables(self) -> None:
@@ -172,8 +170,7 @@ class VectorStore:
             start_date, end_date = time_range
             search_args["uuid_time_filter"] = client.UUIDTimeRange(start_date, end_date)
 
-        with timer("Vector search"):
-            results = self.vec_client.search(query_embedding, **search_args)
+        results = self.vec_client.search(query_embedding, **search_args)
 
         if return_dataframe:
             return self._create_dataframe_from_results(results)
@@ -279,12 +276,10 @@ class VectorStore:
         LIMIT %s
         """
 
-        with timer("Keyword search"):
-            # Create a new connection using psycopg2
-            with psycopg2.connect(self.settings.database.service_url) as conn:
-                with conn.cursor(cursor_factory=RealDictCursor) as cur:
-                    cur.execute(search_sql, (query, limit))
-                    results = cur.fetchall()
+        with psycopg2.connect(self.settings.database.service_url) as conn:
+            with conn.cursor(cursor_factory=RealDictCursor) as cur:
+                cur.execute(search_sql, (query, limit))
+                results = cur.fetchall()
 
         if return_dataframe:
             if not results:
