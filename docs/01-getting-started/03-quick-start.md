@@ -62,17 +62,16 @@ cd ../docker
 
 ```bash
 # Create a new virtual environment
-python -m venv venv
+python3.12 -m venv .venv
 
 # Activate the virtual environment
 # On Windows:
-venv\Scripts\activate
+.venv\Scripts\activate
 # On macOS and Linux:
-source venv/bin/activate
+source .venv/bin/activate
 
 # Install the required packages
-cd app
-pip install -r requirements.txt
+pip install -r app/requirements.txt --index-url https://pypi.org/simple
 ```
 
 #### 7. Populate the vector store
